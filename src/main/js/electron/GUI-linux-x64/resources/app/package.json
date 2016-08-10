@@ -1,0 +1,16 @@
+{
+  "name": "your-app",
+  "version": "0.2.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . GUI --platform=linux --arch=x64  --overwrite"
+  },
+  "dependencies": {
+    "request-promise": "*",
+    "electron-prebuilt": "*"
+  },
+  "devDependencies": {
+    "electron-packager": "^7.5.1"
+  }
+}

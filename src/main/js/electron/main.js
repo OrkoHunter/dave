@@ -9,14 +9,13 @@ app.on('window-all-closed', function() {
 
 
 app.on('ready', function() {
-  var subpy = require('child_process').spawn('python', ['../../python/server.py']);
+  var subpy = require('child_process').spawn('python', ['../../../python/server.py']);
 
   var rq = require('request-promise');
   var mainAddr = 'http://localhost:5000';
 
   var openWindow = function(){
-    mainWindow = new BrowserWindow({width:1200, height: 700});
-
+    mainWindow = new BrowserWindow({width:1200, height: 700 , icon:'./icon.png'});
     mainWindow.loadURL('http://localhost:5000');
      mainWindow.webContents.session.clearCache(function(){})
     // mainWindow.webContents.openDevTools();
